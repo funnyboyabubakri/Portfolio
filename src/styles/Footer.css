@@ -1,0 +1,38 @@
+.footer{
+    height: 60px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer p{
+    font-size: 14px;
+    font-weight: 500;
+    background-color: transparent;
+}
+.footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+.footer a:hover{
+    text-decoration: underline;
+}
+.footer span{
+    font-weight: 700;
+}
+.footer span:hover{
+    text-decoration: underline;
+}
+.footer .heart{
+    color: red;
+}
+.footer .heart:hover{
+    text-decoration: none;
+}
+.footer .developer{
+    color: #ff6600;
+}
+.footer .developer:hover{
+    text-decoration: underline;
+}
