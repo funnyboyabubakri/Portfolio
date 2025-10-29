@@ -25,6 +25,13 @@ const AdminFormpage = () => {
     const correctName = 'Abubakri';
     const correctPassword = '#1Abubakri2$';
 
+    console.log('Input email:', formData.email.trim().toLowerCase());
+    console.log('Correct email:', correctEmail.toLowerCase());
+    console.log('Input name:', formData.name.trim());
+    console.log('Correct name:', correctName);
+    console.log('Input password:', formData.password);
+    console.log('Correct password:', correctPassword);
+
     if (
       formData.email.trim().toLowerCase() === correctEmail.toLowerCase() &&
       formData.name.trim() === correctName &&
