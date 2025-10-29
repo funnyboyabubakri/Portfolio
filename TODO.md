@@ -1,0 +1,5 @@
+- [x] Create NotFound component for 404 pages
+- [x] Update main.jsx to include routes for /admin, /admin-form, and * for NotFound
+- [x] Rewrite Admin-formpage.jsx as login form with useState, hardcoded credentials check, and redirect to /admin
+- [x] Add authentication check to Adminpage: redirect to /admin-form if not authenticated
+- [x] Set authentication flag in AdminFormpage on successful login

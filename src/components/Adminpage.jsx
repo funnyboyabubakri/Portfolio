@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import "./../styles/Adminpage.css"; 
+import { useNavigate } from 'react-router-dom';
+import "./../styles/Adminpage.css";
 
 const Adminpage = () => {
+  const navigate = useNavigate();
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -15,8 +17,13 @@ const Adminpage = () => {
   const [uploadMessage, setUploadMessage] = useState('');
 
   useEffect(() => {
-    fetchProjects();
-  }, []);
+    const isAuthenticated = localStorage.getItem('isAuthenticated');
+    if (!isAuthenticated) {
+      navigate('/admin-form');
+    } else {
+      fetchProjects();
+    }
+  }, [navigate]);
 
   const fetchProjects = async () => {
     try {
