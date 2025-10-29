@@ -23,11 +23,11 @@ const AdminFormpage = () => {
     // Hardcoded credentials
     const correctEmail = 'adebayoabubakriolakayode12345@gmail.com';
     const correctName = 'Abubakri';
-    const correctPassword = '#1Abubakri2$ ';
+    const correctPassword = '#1Abubakri2$';
 
     if (
-      formData.email === correctEmail &&
-      formData.name === correctName &&
+      formData.email.trim().toLowerCase() === correctEmail.toLowerCase() &&
+      formData.name.trim() === correctName &&
       formData.password === correctPassword
     ) {
       localStorage.setItem('isAuthenticated', 'true');
