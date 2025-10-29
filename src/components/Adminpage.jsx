@@ -60,7 +60,7 @@ const Adminpage = () => {
     data.append('projectTitle', formData.projectTitle);
     data.append('projectDescription', formData.projectDescription);
     data.append('projectLink', formData.projectLink);
-    data.append('file', formData.image);
+    data.append('image', formData.image);
 
     try {
       const response = await fetch(`${import.meta.env.REACT_APP_API_BASE}/upload-project`, {
