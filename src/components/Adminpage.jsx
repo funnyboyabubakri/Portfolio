@@ -89,6 +89,26 @@ const Adminpage = () => {
     }
   };
 
+  const handleDelete = async (projectId) => {
+    if (!window.confirm('Are you sure you want to delete this project?')) return;
+
+    try {
+      const response = await fetch(`${import.meta.env.REACT_APP_API_BASE}/delete-project/${projectId}`, {
+        method: 'DELETE',
+      });
+
+      if (response.ok) {
+        fetchProjects(); // Refresh the list
+      } else {
+        const result = await response.json();
+        alert(result.message || 'Delete failed');
+      }
+    } catch (error) {
+      alert('Error deleting project');
+      console.error(error);
+    }
+  };
+
   return (
     <div className="admin-page">
       <h1>Admin Dashboard</h1>
@@ -168,6 +188,9 @@ const Adminpage = () => {
                     <a href={project.profileLink} target="_blank" rel="noopener noreferrer">
                       View Project
                     </a>
+                    <button onClick={() => handleDelete(project._id)} className="delete-btn">
+                      Delete
+                    </button>
                   </div>
                 </div>
               ))
