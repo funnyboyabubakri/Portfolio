@@ -12,7 +12,7 @@ const RecentProjects = () => {
 
   const fetchProjects = async () => {
     try {
-      const response = await fetch(`${import.meta.env.REACT_APP_API_BASE}/get-recent-projects`);
+      const response = await fetch(`${import.meta.env.VITE_API_BASE}/get-recent-projects`);
       const result = await response.json();
       if (response.ok) {
         setProjects(result.projects);

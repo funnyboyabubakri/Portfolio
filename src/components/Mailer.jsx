@@ -21,7 +21,7 @@ const Mailer = () => {
     setResponseMessage('');
 
     try {
-      const response = await fetch(`${import.meta.env.REACT_APP_API_BASE}/send-message`, {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE}/send-message`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

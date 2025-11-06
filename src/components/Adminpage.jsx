@@ -27,7 +27,7 @@ const Adminpage = () => {
 
   const fetchProjects = async () => {
     try {
-      const response = await fetch(`${import.meta.env.REACT_APP_API_BASE}/get-recent-projects`);
+      const response = await fetch(`${import.meta.env.VITE_API_BASE}/get-recent-projects`);
       const result = await response.json();
       if (response.ok) {
         setProjects(result.projects);
@@ -63,7 +63,7 @@ const Adminpage = () => {
     data.append('image', formData.image);
 
     try {
-      const response = await fetch(`${import.meta.env.REACT_APP_API_BASE}/upload-project`, {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE}/upload-project`, {
         method: 'POST',
         body: data,
       });
@@ -93,7 +93,7 @@ const Adminpage = () => {
     if (!window.confirm('Are you sure you want to delete this project?')) return;
 
     try {
-      const response = await fetch(`${import.meta.env.REACT_APP_API_BASE}/delete-project/${projectId}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE}/delete-project/${projectId}`, {
         method: 'DELETE',
       });
 
