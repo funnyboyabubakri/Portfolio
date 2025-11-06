@@ -77,7 +77,7 @@ const Adminpage = () => {
           projectLink: '',
           image: null,
         });
-        fetchProjects(); // Refresh the list
+        fetchProjects(); 
       } else {
         setUploadMessage(result.message || 'Upload failed');
       }
@@ -98,7 +98,7 @@ const Adminpage = () => {
       });
 
       if (response.ok) {
-        fetchProjects(); // Refresh the list
+        fetchProjects(); 
       } else {
         const result = await response.json();
         alert(result.message || 'Delete failed');

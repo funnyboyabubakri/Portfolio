@@ -120,7 +120,6 @@
   font-weight: 600;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .recent-projects h2 {
     font-size: 2rem;
