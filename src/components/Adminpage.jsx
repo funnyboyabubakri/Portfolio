@@ -171,7 +171,7 @@ const Adminpage = () => {
       <div className="projects-section">
         <h2>Recent Projects</h2>
         {loading ? (
-          <p>Loading projects...</p>
+          <p>Loading projects</p>
         ) : error ? (
           <p className="error">{error}</p>
         ) : (
