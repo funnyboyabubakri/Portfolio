@@ -14,8 +14,8 @@ const Header = () => {
           Feel free to colllaborate or reach out for your websites
         </span>
         <div className="down-of-header">
-          <section id="hireMe"><button>Hire Me</button></section>
-          <button>Download CV</button>
+          <section id="hireMe"><button onClick={() => document.getElementById('mailer').scrollIntoView({ behavior: 'smooth' })}>Hire Me</button></section>
+          <button onClick={() => window.open('/assets/Adebayo-Abubakri-CV.docx', '_blank')}>Review CV</button>
         </div>
       </div>
       <div className="right-of-header">

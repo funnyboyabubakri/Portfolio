@@ -188,7 +188,7 @@ const Adminpage = () => {
                     <a href={project.profileLink} target="_blank" rel="noopener noreferrer">
                       View Project
                     </a>
-                    <button className="delete" onClick={() => handleDelete(project._id)}>
+                    <button className="delete" onClick={() => handleDelete(project._id)} >
                       Delete
                     </button>
                   </div>
