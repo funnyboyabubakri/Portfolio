@@ -46,9 +46,9 @@ const RecentProjects = () => {
                   <div className="project-info">
                     <h3>{project.projectTitle}</h3>
                     <p>{project.projectDescription}</p>
-                    <a href={project.profileLink} target="_blank" rel="noopener noreferrer" className="view-project-btn">
+                    <button onClick={() => project.profileLink && window.open(project.profileLink, '_blank')} className="view-project-btn">
                       View Project
-                    </a>
+                    </button>
                   </div>
                 </div>
               ))
